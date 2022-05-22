@@ -1,0 +1,764 @@
+/* Global START ===============================================================*/
+
+/* body {	
+	background: linear-gradient(to bottom, #3EABDC, #3ba877, #fec051, #FEE140, #FA709A );
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+body:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to right bottom, rgba(255,255,255,0.2), #13829b 55%);
+} */
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2.6em;
+    letter-spacing: 0.05em;
+    color: #384141;
+}
+
+h3 {
+    color: #515252;
+}
+
+p, a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #515252;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3EABDC;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #515252;
+}
+
+/* Global END =================================================================*/
+/* Landing page START =========================================================*/
+
+.bg {
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/images/1-landing-page/landing-bg.jpg);
+    filter: saturate(130%);
+    /* filter: contrast(1.03); */
+    min-height: 93vh;
+}
+
+.bgtext {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.btn-bg {
+    background-color: #24cdd5;
+    color: #ffffff;
+    width: 150px;
+}
+
+.btn-bg:hover {
+    background: transparent;
+    color: #24cdd5;
+}
+
+.bgtext:hover .bg-animation {
+    position: relative;
+    top: 0;
+    animation: fade-in-center-more 2.5s forwards;
+}
+
+@keyframes fade-in-center-more {
+    0% {
+        opacity: 0;
+        line-height: 7;
+        top: -50%;
+    }
+    100% {
+        opacity: 1;
+        line-height: 0.5;
+    }
+    }
+
+/* Landing page END =========================================================*/
+/* Navbar START ============================================================ */
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #24cdd5;
+}
+
+.logo:hover {
+    cursor: pointer;
+    animation: logo 1.2s ease-in-out;
+}
+
+@keyframes logo {
+    50% {
+        letter-spacing: 20px;
+        color: #007fb9;
+    }
+}
+
+.navibar {
+    min-height: 7vh;
+    background-color: #ffffff;
+    box-shadow: 3px 1px 15px #888888;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: #24cdd5;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+    transform: scale(0,1);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    transform: scale(1,1);
+}
+
+/* Navbar END ============================================================== */
+/* About START ============================================================= */
+
+.about {
+    min-height: 35rem;
+    overflow: hidden;
+}
+
+.btn-about {
+    background: linear-gradient(to right, #0295da 0%, #24cdd5 51%, #0295da 100%);
+    height: 40px;
+    width: 150px;
+    background-size: 200% auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-about:hover {
+    background-position: right;
+}
+
+.about:hover .about-text {
+    animation: fade-in-left-more 2s ease forwards;
+}
+
+.about:hover .about-rotate {
+animation: hover-rotation 6s infinite linear;
+}
+
+@keyframes hover-rotation {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(359deg);
+}
+}
+
+/* About END =============================================================== */
+/* Pillars START =========================================================== */
+
+.pillar-cards-parent {
+    min-height: 600px;
+    background-color: #26313c;
+}
+
+.pillar-cards-process {
+    background-color: #26313c;
+}
+
+.pillar-cards-process p {
+    color: #fff;
+}
+
+.pillar-cards-title {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 32px;
+}
+
+.pillar-cards-title:hover {
+    background: linear-gradient(to right, #0295da 20%, #24cdd5 100%);
+    border: none;
+    cursor: pointer;
+}
+
+.pillar-cards-parent:hover .pillar-cards-text-top {
+    animation: fade-in-center 3s ease forwards;
+}
+
+@keyframes fade-in-center {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+.pillar-cards-parent:hover .pillar-cards-child {
+    animation: fade-in-left 1.5s ease forwards;
+}
+
+@keyframes fade-in-left {
+0% {
+    opacity: 0;
+    transform: translateX(-150px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}     
+
+/* Pillars END =========================================================== */
+/* Mobile START ========================================================== */
+
+.mobile {
+    min-height: 880px;
+    overflow: hidden;
+}
+
+.mobile i {
+    color: #24cdd5;
+}
+
+.mobile-left-up:hover i,
+.mobile-left-down:hover i,
+.mobile-right-up:hover i,
+.mobile-right-down:hover i{
+    position: relative;
+    top: 0;
+    animation: bounce 0.5s ease forwards;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    100% {
+        top: -10px;
+}
+}   
+
+.mobile-left-up:hover,
+.mobile-left-down:hover,
+.mobile-right-up:hover,
+.mobile-right-down:hover {
+    color: #007fb9;
+    cursor: pointer;
+}
+.phone {
+    background-image: url(/assets/images/3-mobile/phone-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 11% 11% 11%;
+    filter: saturate(120%);
+}
+
+.mobile:hover .mobile-text {
+    animation: fade-in-down 2s ease forwards;
+}
+
+@keyframes fade-in-down {
+0% {
+    opacity: 0;
+    transform: translateY(50px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}     
+
+.mobile:hover .mobile-left-up {
+    animation: fade-in-left 1s ease forwards;
+}
+.mobile:hover .mobile-left-down {
+    animation: fade-in-left-more 1s ease forwards;
+}
+
+@keyframes fade-in-left-more {
+0% {
+    opacity: 0;
+    transform: translateX(-350px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}     
+
+.mobile:hover .mobile-right-up {
+    animation: fade-in-right 1s ease forwards;
+}
+
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }   
+
+.mobile:hover .mobile-right-down {
+    animation: fade-in-right-more 1s ease forwards;
+}
+
+@keyframes fade-in-right-more {
+0% {
+    opacity: 0;
+    transform: translateX(350px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}     
+
+/* Mobile END ========================================================== */
+/* Parallax START ====================================================== */
+
+.parallax {
+    position: relative;
+    background: no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(/assets/images/4-parallax/parallax.jpg);
+    height: 400px;
+    filter: saturate(150%);
+}
+
+.parallax-row {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.parallax h4 {
+    color: #515252;
+}
+
+.parallax:hover .parallax-left {
+    animation: fade-in-down 2s ease forwards;
+}
+
+.parallax:hover .parallax-right {
+    animation: fade-in-up 2s ease forwards;
+}
+
+@keyframes fade-in-up {
+0% {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}   
+
+/* Parallax END ======================================================== */
+/* Experts START ======================================================= */
+
+.experts {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.card-experts-img {
+    overflow: hidden;
+}
+
+.card-experts-img img {
+    transition: all 1s ease;
+    object-fit: cover;
+    height: 300px;
+    width: 250px;
+}
+
+.card-experts-img:hover img {
+    transform: scale(1.2);
+}
+
+.controls-large-screen {
+    width: 5vh;
+    height: 5vh;
+}
+
+.controls-small-screen {
+    width: 3.5vh;
+    height: 3.5vh;
+}
+
+.controls-both-screens {
+    background-color: #0ab7bd;
+    border-radius: 50%;
+    top: 79%;
+    background: linear-gradient(to right, hsla(199, 94%, 18%, 0.548) 0%, #24cdd5 51%, #034a6b 100%);
+    backdrop-filter: blur(5px);
+    border: 2px solid #09adb3;
+    box-shadow: 0px 1px 10px 3px #003068;
+    transition: all 0.4s ease-in-out;
+}
+
+.experts:hover .experts-left {
+    animation: fade-in-left-more 1s ease forwards;
+}
+
+.experts:hover .experts-right {
+    animation: fade-in-right-more 1s ease forwards;
+}
+
+.experts:hover .experts-carousel {
+    animation: fade-in-down 2s ease forwards;
+}
+
+/* Experts END ========================================================= */
+/* Pricing START ======================================================= */
+
+.pricing {
+    background-color: #f6f7f8;
+}
+
+.pricing-card {
+    box-shadow: 2px 3px 15px #c9c9c9;
+}
+
+.pricing-card-icon-check {
+    color: #00b91f;
+}
+
+.pricing-card-icon-close {
+    color: #fd5949;
+}
+
+.pricing-card:hover {
+    animation: pricing-hover 2s ease-out forwards;
+    color: #fff;
+    background-color: #09adb3;
+}
+
+.pricing-card:hover p {
+    color: #fff;
+}
+
+@keyframes pricing-hover {
+    50% {
+        background-color: #26313c;
+    }
+    100% {
+        background-color: #26313c;
+    }
+  }
+
+.btn-pricing {
+    background-color: #29e6f0;
+    width: 150px;
+}
+
+.btn-pricing:hover {
+    background: transparent;
+    color: #24cdd5;
+}  
+
+.pricing:hover .pricing-text {
+    animation: fade-in-down 1s ease forwards;
+
+}
+
+.pricing:hover .pricing-card-fade {
+    animation: fade-in-down 2s ease forwards;
+}
+
+/* Pricing END ========================================================= */
+/* Portfolio START ===================================================== */
+
+.portfolio .btn-portfolio {
+    text-decoration: none;
+    color: #000000;
+}
+
+.portfolio:hover .portfolio-text {
+    animation: fade-in-up 2s ease forwards;
+}
+
+.portfolio-img {
+    overflow: hidden;
+    filter: drop-shadow(0 0 0.35rem crimson);
+}
+.portfolio-img img {
+    transition: all 1s ease;
+}
+
+.portfolio-img:hover img {
+    transform: scale(1.1);
+    filter: saturate(150%);
+    filter: contrast(1.5);
+}
+
+/* Portfolio END ======================================================= */
+/* Testimoniaal START ================================================== */
+
+.testimonial-parallax {
+    background: no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url(/assets/images/7-testimonial/testimonial-bg.jpg);
+    min-height: 300px;
+}
+
+.card-testimonial {
+    background: linear-gradient(rgba(255, 255, 255 ,0.1), rgba(57, 235, 205, 0.4));
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 2px 10px 4px #538601;
+    border: 5px solid #aaa811;
+    border-radius: 20%;
+}
+
+.card-testimonial h5,
+.card-testimonial p {
+    color: #09adb3;
+}
+
+.testimonial-img {
+    overflow: hidden;
+}
+
+.testimonial-img img {
+    transition: all 1s ease;
+}
+
+.testimonial-img:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 0.25rem #8DEBFF);
+}
+
+.testimonial-controls {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 40%;
+    background: linear-gradient(to right, hsla(199, 98%, 43%, 0.548) 0%, #24cdd5 51%, #0295da 100%);
+    background-size: 200% auto;
+    backdrop-filter: blur(5px);
+    border: 2px solid #09adb3;
+    box-shadow: 0px 1px 10px 3px #538601;
+    transition: all 0.4s ease-in-out;
+  }
+
+.testimonial-controls:hover {
+    background-position: right;
+    transform: scale(1.1);
+}
+
+.testimonial-parallax:hover .testimonial-text {
+    animation: fade-in-right-more 1s ease forwards;
+}
+
+/* Testimonial END ===================================================== */
+/* Contact START ======================================================= */
+.contact-us {
+    min-height: 700px;
+    overflow: hidden;
+}
+
+.contact-details i,
+.footer-icons i {
+    cursor: pointer;
+    border-radius: 25%;
+    transition: 0.5s ease-out;
+    padding: 7px;
+    margin: 10px;
+}
+
+.facebook:hover,
+.linkedin:hover {
+    color: white;
+    border-radius: 50%;
+    background-color: #007fb9;
+}
+
+.twitter:hover {
+    color: white;
+    border-radius: 50%;
+    background-color: #24cdd5;
+}
+
+.instagram:hover {
+    color: white;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.whatsapp:hover {
+    color: white;
+    border-radius: 50%;
+    background-color: #24d541;
+}
+
+.gmail:hover {
+    color: white;
+    border-radius: 50%;
+    background-color: #dd1b1b;
+}
+
+.contact-btn {
+    background: linear-gradient(to right, #0295da 0%, #24cdd5 51%, #0295da 100%);
+    background-size: 200% auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-position: right;
+}
+
+.contact-us:hover .contact-text {
+    animation: fade-in-up 2s ease forwards;
+}
+
+.contact-us:hover .contact-form {
+    animation: fade-in-left 1s ease forwards;
+}
+
+.contact-us:hover .contact-info {
+    animation: fade-in-right-more 1s ease forwards;
+}
+
+/* Contact END ========================================================= */
+/* Map START =========================================================== */
+.map {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.map-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-80%);
+    margin-top: 200px;
+    background-color: #fff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(5, 168, 160, 0.623));
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 1px 10px 3px #014e8dcb;
+}
+
+.map-form:hover .map-form-text {
+    animation: fade-in-down 2s ease forwards;
+}
+
+.map-btn {
+    background: linear-gradient(to right, #0295da 0%, #00cec4 51%, #0295da 100%);
+    background-size: 350% auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.map-btn:hover {
+    background-position: right;
+}
+
+/* Map END ============================================================= */
+/* Footer START ======================================================== */
+
+.footer-bg {
+    background-color: #26313c;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.news-text:hover span {
+    cursor: pointer;
+    color: #00cec4;
+}
+
+.navigation-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-nav-home:hover a,
+.footer-nav-about:hover a,
+.footer-nav-pricing:hover a,
+.footer-nav-portfolio:hover a,
+.footer-nav-contact:hover a {
+    position: relative;
+    right: 0;
+    text-decoration: none;
+    color: #00cec4;
+    animation: to-right 1s ease forwards;
+    cursor: pointer;
+}
+
+@keyframes to-right {
+    100% {
+        right: -10px;
+    }
+} 
+
+.footer:hover .footer-icons {
+    animation: fade-in-center 2s ease forwards;
+}
+
+.business-services:hover span {
+    cursor: pointer;
+    color: #00cec4;
+}
+
+/* Footer END ========================================================== */
+
+@media (max-width: 768px) {
+    .bg {
+        min-height: 50vh;
+    }
+}
