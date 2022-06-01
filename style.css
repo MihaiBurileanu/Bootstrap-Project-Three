@@ -178,7 +178,7 @@ p, a {
 }
 
 .about:hover .about-rotate {
-animation: hover-rotation 6s infinite linear;
+animation: hover-rotation 7.5s infinite linear;
 }
 
 @keyframes hover-rotation {
@@ -239,7 +239,7 @@ to {
 }
 
 .pillar-cards-parent:hover .pillar-cards-child {
-    animation: fade-in-left 1.5s ease forwards;
+    animation: fade-in-left 2s ease forwards;
 }
 
 @keyframes fade-in-left {
@@ -677,13 +677,13 @@ to {
 .map {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 440px;
 }
 
 .map-form {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%,-80%);
     margin-top: 200px;
     background-color: #fff;
